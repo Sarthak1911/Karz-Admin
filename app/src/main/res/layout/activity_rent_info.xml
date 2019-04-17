@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Renting_Process.RentInfo">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/car_info_label"
+                style="@style/Label_header"
+                android:text="Car"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/car_name_label"
+                style="@style/book_car_tv_style"
+                android:text="Name : "
+                app:layout_constraintTop_toBottomOf="@id/car_info_label" />
+
+            <TextView
+                android:id="@+id/car_name"
+                style="@style/book_car_tv_style"
+                android:hint="car_name"
+                app:layout_constraintLeft_toRightOf="@id/car_name_label"
+                app:layout_constraintTop_toBottomOf="@id/car_info_label" />
+
+            <TextView
+                android:id="@+id/car_model_label"
+                style="@style/book_car_tv_style"
+                android:text="Model : "
+                app:layout_constraintTop_toBottomOf="@id/car_name_label" />
+
+            <TextView
+                android:id="@+id/model_name"
+                style="@style/book_car_tv_style"
+                android:hint="A6"
+                app:layout_constraintLeft_toRightOf="@id/car_model_label"
+                app:layout_constraintTop_toBottomOf="@id/car_name_label" />
+
+            <TextView
+                android:id="@+id/car_mileage_label"
+                style="@style/book_car_tv_style"
+                android:text="Mileage(km) : "
+                app:layout_constraintTop_toBottomOf="@id/car_model_label" />
+
+            <TextView
+                android:id="@+id/mileage_name"
+                style="@style/book_car_tv_style"
+                android:hint="30000 Km"
+                app:layout_constraintLeft_toRightOf="@id/car_mileage_label"
+                app:layout_constraintTop_toBottomOf="@id/car_model_label" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="32dp"
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/car_mileage_label" />
+
+
+            <TextView
+                android:id="@+id/rent_info_label"
+                style="@style/Label_header"
+                android:text="Rent Information"
+                android:layout_margin="@dimen/text_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <TextView
+                android:id="@+id/per_km_label"
+                style="@style/book_car_tv_style"
+                android:text="Pricing(/km) : "
+                app:layout_constraintTop_toBottomOf="@id/rent_info_label" />
+
+            <TextView
+                android:id="@+id/per_km_charge"
+                style="@style/book_car_tv_style"
+                android:hint="3$"
+                app:layout_constraintLeft_toRightOf="@id/per_km_label"
+                app:layout_constraintTop_toBottomOf="@id/rent_info_label" />
+
+            <TextView
+                android:id="@+id/fixed_deposit_label"
+                style="@style/book_car_tv_style"
+                android:text="Deposit : "
+                app:layout_constraintTop_toBottomOf="@id/per_km_label" />
+
+            <TextView
+                android:id="@+id/fixed_deposit_charge"
+                style="@style/book_car_tv_style"
+                android:hint="$30"
+                app:layout_constraintLeft_toRightOf="@id/fixed_deposit_label"
+                app:layout_constraintTop_toBottomOf="@id/per_km_label" />
+
+            <TextView
+                android:id="@+id/renting_period"
+                style="@style/book_car_tv_style"
+                android:text="Renting Period : "
+                app:layout_constraintTop_toBottomOf="@id/fixed_deposit_label" />
+
+            <Spinner
+                android:id="@+id/start_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+
+                android:tooltipText="Start date"
+                app:layout_constraintLeft_toRightOf="@id/renting_period"
+                app:layout_constraintTop_toBottomOf="@id/fixed_deposit_label" />
+
+            <TextView
+                android:id="@+id/to_label"
+                style="@style/book_car_tv_style"
+                android:layout_marginStart="8dp"
+                android:text="to "
+                app:layout_constraintLeft_toRightOf="@id/start_date_time"
+                app:layout_constraintTop_toBottomOf="@id/fixed_deposit_label" />
+
+            <Spinner
+                android:id="@+id/end_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:tooltipText="End date"
+                app:layout_constraintLeft_toRightOf="@id/to_label"
+                app:layout_constraintTop_toBottomOf="@id/fixed_deposit_label">
+
+            </Spinner>
+
+            <LinearLayout
+                android:id="@+id/overview_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/renting_period">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Renting Period : " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="start and end date " />
+
+                    <TextView
+                        android:id="@+id/hour_estimate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="(hour estimate) " />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Billing overview : " />
+
+                    <TextView
+                        android:id="@+id/estimate_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="estimated price " />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_continue_rentinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Continue"
+                        android:onClick="onClick"
+                        android:layout_weight="1"/>
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_cancel_rentinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:onClick="onClick"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/car_holder"/>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="82dp"-->
+    <!--android:padding="@dimen/activity_vertical_margin">-->
+
+    <!--<View-->
+    <!--android:id="@+id/EDIT_circle"-->
+    <!--android:transitionName="@string/transition_name_circle_ele"-->
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:background="@drawable/circle_shape"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentLeft="true"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/EDIT_car_name"-->
+    <!--android:transitionName="@string/transition_name_car_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Not a Ferrari"-->
+    <!--android:layout_toRightOf="@+id/EDIT_circle"-->
+    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="25sp"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/EDIT_customer_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Name"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/EDIT_customer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/EDIT_customer_name_label"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Customer Name"
+                    android:textColor="#9f9f9f"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/EDIT_lic_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License No:"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/EDIT_lic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/EDIT_lic_label"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Model Number"
+                    android:textColor="#9f9f9f"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
